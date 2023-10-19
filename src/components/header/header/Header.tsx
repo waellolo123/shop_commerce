@@ -4,15 +4,16 @@ import Image from "next/image";
 import {BiCaretDown} from "react-icons/bi";
 import {HiOutlineSearch} from "react-icons/hi";
 import {SlLocationPin} from "react-icons/sl";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <div className="w-full h-30 bg-amazon_blue text-lightText sticky top-0 z-50 p-2">
       <div className="h-full w-full mx-auto inline-flex items-center justify-between gap-1 mdl:gap-3 px-4">
         {/* logo */}
-        <div className="px-2 cursor-pointer duration-300 flex items-center justify-center h-[70%]">
+        <Link href={"/"} className="px-2 cursor-pointer duration-300 flex items-center justify-center h-[70%]">
          <Image src={logo} alt="logo" className="w-28 object-cover "/>
-        </div>
+        </Link >
         {/* delivery */}
         <div className="flex items-center gap-2 cursor-pointer">
           <SlLocationPin className=""/>
@@ -41,11 +42,11 @@ const Header = () => {
           <p className="text-white font-bold">& Favorite</p>
         </div>
         {/* cart */}
-        <div className="flex items-center px-2 cursor-pointer relative">
+        <Link href={"/cart"} className="flex items-center px-2 cursor-pointer relative">
           <Image src={cartIcon} alt="cartImg" className="w-auto object-cover h-8"/>
           <p className="text-xs text-white font-bold mt-3">cart</p>
           <span className="absolute text-amazon_yellow text-lg top-[-5px] right-[16px] font-semibold">0</span>
-        </div>
+        </Link>
       </div>
     </div>
   )

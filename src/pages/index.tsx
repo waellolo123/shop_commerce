@@ -1,9 +1,10 @@
-import Header from "@/components/header/header/Header";
 
 export default function Home() {
   return (
     <main>
-      <Header />
+    
+      <div className="py-10 bg-gray-300">this is the homepage</div>
+   
     </main>
   )
 }
